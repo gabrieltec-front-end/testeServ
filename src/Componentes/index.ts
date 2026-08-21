@@ -1,0 +1,11 @@
+export { default as Banner } from "./Banner";
+export * from "./Logo";
+export { default as Formulario } from "./Formulario";
+export * from "./InputProps";
+export * from "./ButtonProps";
+export * from "./typegraphyes";
+export { default as Header } from "./Header";
+export * from "./CardComponente";
+export * from "./Background";
+export {default as Tabela} from "./TableComp"
+export * from "./StyledBackground"
