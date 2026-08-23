@@ -1,5 +1,5 @@
 import styled, { Theme } from "styled-components"
-
+import { Link } from "react-router-dom"
 import Rem from "@/utils/pxToRem"
 
 export const StyledH1 = styled.h1<{ theme?: Theme }>`
@@ -49,5 +49,18 @@ export const StyledNavText = styled.span<{ theme?: Theme }>`
 
     &:hover {
         color: ${({ theme }) => theme.buttons.primaryHover};
+    }
+`
+
+export const StyledNavLink = styled(Link)`
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    &:hover {
+
+    color:${(props) => props.theme}
+        
     }
 `
