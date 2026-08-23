@@ -6,7 +6,7 @@ import {
 
 
 //PAGE
-import { Cadastro, Home, Login, ListUsuarios, CadastroP, ListP } from "@/page"
+import { Cadastro, Home, Login, ListUsuarios, CadastroP, ListP, CadastroI } from "@/page"
 function App() {
 
   return (
@@ -14,6 +14,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Login />} >Login</Route>
+          <Route path="/cadastroI" element={<CadastroI />}>CadastroI</Route>
           <Route path='/home' element={<Home />} >Home</Route>
           <Route path='/cadastro' element={<Cadastro />} >Cadastro</Route>
           <Route path='/listaUsuarios' element={<ListUsuarios />} >Cadastro</Route>
