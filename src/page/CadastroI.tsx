@@ -6,6 +6,7 @@ import { CadastroUsuario, CadastroData, } from "@/types"
 import { Grid, Box, Container } from "@mui/material"
 import { useState } from "react"
 import Rem from "@/utils/pxToRem"
+import { useNavigate } from "react-router-dom"
 
 
 
@@ -13,6 +14,7 @@ import Rem from "@/utils/pxToRem"
 
 
 function CadastroI() {
+    const navigate = useNavigate();
 
     const [check, setChecked] = useState(false)
     const inputs = [
@@ -39,6 +41,9 @@ function CadastroI() {
             administrador: String(check)
         })
         console.log(data)
+        if (!error) {
+            return navigate("/", { replace: true })
+        }
 
     }
 

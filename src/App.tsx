@@ -37,11 +37,12 @@ function App() {
           <Route path="/cadastroI" element={<CadastroI />}>
             CadastroI
           </Route>
-          <Route path="/home" element={<Home />}>
-            Home
-          </Route>
+
 
           <Route element={<SecureRoute />}>
+            <Route path="/home" element={<Home />}>
+              Home
+            </Route>
 
             <Route path="/cadastro" element={<Cadastro />}>
               Cadastro
