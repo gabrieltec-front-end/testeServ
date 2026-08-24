@@ -30,9 +30,19 @@ export const RequestPost = <T, P>(endpoint: string) => {
       });
       setData(response.data);
       console.log(response.data)
+      return {
+            success: true,
+            data: response.data,
+            error: null,
+        }
     } catch (error: any) {
        console.log("ERRO:", error.response?.data)
       setError(error.response?.status || 500);
+      return {
+            success: false,
+            data:null,
+            error: error.response?.status
+        }
     } finally {
       setLoading(false);
     }
@@ -69,9 +79,11 @@ console.log("HEADER:",token)
       });
       setData(response.data);
       console.log(response.data)
+       
     } catch (error: any) {
      console.log("TOKEN:", Cookies.get("authorization"))
       setError(error.response?.status || 500);
+       
     } finally {
       setLoading(false);
     }
